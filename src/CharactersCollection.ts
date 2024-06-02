@@ -7,7 +7,7 @@ export class CharactersCollection {
 
     compare(leftIndex: number, rightIndex: number): boolean {
         const tempArray = this.data.split('')
-        return tempArray[leftIndex] > tempArray[rightIndex];
+        return tempArray[leftIndex].toLowerCase() > tempArray[rightIndex].toLowerCase();
     }
 
     swap(leftIndex: number, rightIndex: number): void {

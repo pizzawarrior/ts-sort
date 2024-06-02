@@ -7,7 +7,7 @@ import { CharactersCollection } from "./CharactersCollection";
 // sorter.sort()
 // console.log(numbersCollection.data)
 
-const charCollection = new CharactersCollection('zebralicious')
+const charCollection = new CharactersCollection('zebraliXcious')
 const sorter = new Sorter(charCollection)
 sorter.sort()
 console.log(charCollection.data)
