@@ -10,17 +10,14 @@ export class LinkedList {
 
     add(data: number): void {
         const node = new Node(data)
-
         if (!this.head) {
             this.head = node;
             return;
         }
-
         let tail = this.head;
         while (tail.next) {
             tail = tail.next;
         }
-
         tail.next = node
     }
 
@@ -64,5 +61,12 @@ export class LinkedList {
             return this.at(leftIndex).data > this.at(rightIndex).data
         }
 
+        swap(leftIndex: number, rightIndex: number): void {
+            const leftNode = this.at(leftIndex);
+            const rightNode = this.at(rightIndex);
 
+            const sortedLeftNode = leftNode.data;
+            leftNode.data = rightNode.data;
+            rightNode.data = sortedLeftNode;
+        }
     }
