@@ -1,5 +1,9 @@
-export class NumbersCollection {
-    constructor(public data: number[]) {}
+import { Sorter } from "./Sorter";
+
+export class NumbersCollection extends Sorter {
+    constructor(public data: number[]) {
+        super();
+    }
 
     // getter aka accessor method:
     get length(): number {
@@ -14,5 +18,5 @@ export class NumbersCollection {
         const leftNum = this.data[leftIndex];
         this.data[leftIndex] = this.data[rightIndex];
         this.data[rightIndex] = leftNum;
-    }
+        }
     }
