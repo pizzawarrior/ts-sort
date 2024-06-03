@@ -1,7 +1,10 @@
 class Node {
+    data: number;
     next: Node | null = null;
 
-    constructor(public data: number) {
+    constructor(data: number) {
+        this.data = data;
+        this.next = null;
     }
 }
 
@@ -57,7 +60,6 @@ export class LinkedList {
             if (!this.head) {
                 throw new Error('List is empty')
             }
-
             return this.at(leftIndex).data > this.at(rightIndex).data
         }
 
